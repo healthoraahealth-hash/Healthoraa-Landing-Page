@@ -1,0 +1,10 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #192347;
+  min-height: 100%;
+}
+.text-outline-white {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
