@@ -1,8 +1,8 @@
 // contactRoute.js
 import express from 'express';
 import nodemailer from 'nodemailer';
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 const router = express.Router();
 
@@ -10,9 +10,9 @@ const router = express.Router();
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-     user: "healthoraa.health@gmail.com",
+     user: process.env.EMAIL_USER,
     // pass: 'duoaifvnkoolivoq'
-    pass: 'pjbjbgncyknvdivq'
+    pass: process.env.EMAIL_PASS
   },
 });
 
