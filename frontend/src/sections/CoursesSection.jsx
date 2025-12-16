@@ -182,7 +182,7 @@ function CoursesSection() {
                         return (
                             <div
                                 key={index}
-                                className='group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-8 md:p-9 border-2 border-transparent hover:border-slate-900 transition-all duration-300 hover:shadow-2xl flex flex-col'
+                                className='group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-8 md:p-9 border-2 border-transparent hover:border-slate-900 transition-all duration-300 hover:shadow-2xl flex flex-col h-full'
                             >
                                 {/* Icon with Solid Background */}
                                 <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl ${course.color} flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -195,7 +195,7 @@ function CoursesSection() {
                                 </div>
 
                                 {/* Content */}
-                                <div className='relative'>
+                                <div className='relative flex flex-col flex-grow'>
                                     <h3 className='text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-blue-900 transition-colors pr-10 leading-tight'>
                                         {course.title}
                                     </h3>
@@ -214,7 +214,7 @@ function CoursesSection() {
                                     {/* CTA Button */}
                                     <button 
                                         onClick={openForm} 
-                                        className='w-full py-3 sm:py-3.5 bg-slate-900 text-white rounded-xl text-sm sm:text-base font-semibold group-hover:bg-blue-900 transition-all duration-300 flex items-center justify-center gap-2 tracking-wide'
+                                        className='w-full py-3 sm:py-3.5 bg-slate-900 text-white rounded-xl text-sm sm:text-base font-semibold group-hover:bg-blue-900 transition-all duration-300 flex items-center justify-center gap-2 tracking-wide mt-auto'
                                     >
                                         Start Program
                                         <svg className='w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
