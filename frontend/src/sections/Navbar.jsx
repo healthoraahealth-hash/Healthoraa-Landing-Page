@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '../assets/images/Logo.png'; // Fixed import - removed curly braces
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,11 +91,13 @@ function Navbar() {
         <div className="w-full px-3 sm:px-6 lg:px-8 max-w-[100vw]">
           <div className="flex items-center justify-between h-16 sm:h-20">
 
-            {/* Logo */}
+            {/* Logo - Fixed */}
             <div className="flex items-center flex-shrink-0 min-w-0">
-              <div className='h-7 sm:h-10 w-32 bg-white/20 rounded flex items-center justify-center text-white font-bold'>
-                LOGO
-              </div>
+              <img 
+                src={Logo} 
+                className='h-7 sm:h-10 w-auto object-contain' 
+                alt="Logo"
+              />
             </div>
 
             {/* Desktop Navigation */}
