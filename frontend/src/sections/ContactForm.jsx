@@ -48,7 +48,7 @@ function ContactForm() {
                             </div>
                             <div>
                                 <h3 className='font-semibold mb-1 sm:mb-2 text-base text-white sm:text-lg'>Email</h3>
-                                <p className='text-white text-sm sm:text-base break-all'>healthoraa@gmail.com</p>
+                                <p className='text-white text-sm sm:text-base break-all'>healthoraa.health@gmail.com</p>
                             </div>
                         </div>
                     </div>

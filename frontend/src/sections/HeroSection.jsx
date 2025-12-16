@@ -33,7 +33,7 @@ function HeroSection() {
         hometown: hometown
       };
 
-      await submitForm(formData);
+      // await submitForm(formData);
       window.open('https://wa.me/916000206223', '_blank');
       setIsOpen(false);
 

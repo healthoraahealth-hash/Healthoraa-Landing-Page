@@ -29,8 +29,8 @@ function CoursesSection() {
                 age: age,
                 hometown: hometown
             };
-
-            console.log('Form submitted:', formData);
+            
+            // console.log('Form submitted:', formData);
             window.open('https://wa.me/916000206223', '_blank');
             setIsOpen(false);
             

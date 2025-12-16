@@ -12,35 +12,25 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Route for sending email
 router.post("/", async (req, res) => {
-  const { name, number, course, email, age, hometown } = req.body;
+  console.log("CONTACT API HIT");
+  console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
 
   try {
-    await resend.emails.send({
-      from: "Healthoraa <onboarding@resend.dev>", // safe default
+    const result = await resend.emails.send({
+      from: "Healthoraa <onboarding@resend.dev>",
       to: ["healthoraa.health@gmail.com"],
-      subject: `New message from ${name}`,
-      html: `
-        <h3>New Contact Submission</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> ${number}</p>
-        <p><b>Course:</b> ${course}</p>
-        <p><b>Age:</b> ${age}</p>
-        <p><b>Hometown:</b> ${hometown}</p>
-      `,
+      subject: "TEST EMAIL",
+      html: "<p>If you received this, Resend works</p>",
     });
 
-    res.status(200).json({
-      success: true,
-      message: "Email sent successfully!",
-    });
+    console.log("RESEND RESULT:", result);
+
+    res.json({ success: true });
   } catch (err) {
-    console.error("Resend error:", err);
-    res.status(500).json({
-      success: false,
-      message: "Email failed to send",
-    });
+    console.error("RESEND ERROR:", err);
+    res.status(500).json({ success: false });
   }
 });
+
 
 export default router;
