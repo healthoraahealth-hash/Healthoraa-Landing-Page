@@ -34,7 +34,7 @@ function HeroSection() {
       };
 
       await submitForm(formData);
-      window.open('https://wa.me/918822184839', '_blank');
+      window.open('https://wa.me/916000206223', '_blank');
       setIsOpen(false);
 
     } catch (error) {

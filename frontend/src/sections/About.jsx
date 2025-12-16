@@ -24,36 +24,36 @@ function About() {
 
              {/* USPs Section */}
 <div className='w-full max-w-6xl mb-16 sm:mb-20'>
-<div className="flex flex-nowrap items-center justify-start gap-1 sm:gap-6 md:gap-12">
-        <div className='flex items-center gap-2 sm:gap-3 group'>
-            <div className='w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                <svg className='w-4 h-4 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
+<div className="flex flex-nowrap items-center justify-start gap-3 sm:gap-6 md:gap-12 overflow-x-auto pb-2">
+        <div className='flex items-center gap-1.5 sm:gap-3 group flex-shrink-0'>
+            <div className='w-6 h-6 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <svg className='w-3.5 h-3.5 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
                     <path strokeLinecap='round' strokeLinejoin='round' d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
                 </svg>
             </div>
-            <span className='text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Fast Transformation</span>
+            <span className='text-xs sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Fast Transformation</span>
         </div>
 
-        <div className='w-px h-6 sm:h-8 bg-white/20'></div>
+        <div className='w-px h-4 sm:h-8 bg-white/20 flex-shrink-0'></div>
 
-        <div className='flex items-center gap-2 sm:gap-3 group'>
-            <div className='w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                <svg className='w-4 h-4 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
+        <div className='flex items-center gap-1.5 sm:gap-3 group flex-shrink-0'>
+            <div className='w-6 h-6 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <svg className='w-3.5 h-3.5 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
                     <path strokeLinecap='round' strokeLinejoin='round' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' />
                 </svg>
             </div>
-            <span className='text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Anti-Aging</span>
+            <span className='text-xs sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Anti-Aging</span>
         </div>
 
-        <div className='w-px h-6 sm:h-8 bg-white/20'></div>
+        <div className='w-px h-4 sm:h-8 bg-white/20 flex-shrink-0'></div>
 
-        <div className='flex items-center gap-2 sm:gap-3 group'>
-            <div className='w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                <svg className='w-4 h-4 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
+        <div className='flex items-center gap-1.5 sm:gap-3 group flex-shrink-0'>
+            <div className='w-6 h-6 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <svg className='w-3.5 h-3.5 sm:w-5 sm:h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
                     <path strokeLinecap='round' strokeLinejoin='round' d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' />
                 </svg>
             </div>
-            <span className='text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Longevity</span>
+            <span className='text-xs sm:text-base md:text-lg font-semibold text-white whitespace-nowrap'>Longevity</span>
         </div>
     </div>
 </div>

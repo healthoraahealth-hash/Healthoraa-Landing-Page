@@ -25,7 +25,11 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isMenuOpen) setIsScrolled(true);
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (isOpen || isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -33,7 +37,7 @@ function Navbar() {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }, [isOpen, isMenuOpen]);
 
   const openForm = () => {
     setIsOpen(true);
@@ -57,7 +61,7 @@ function Navbar() {
       };
       await submitForm(formData);
 
-      window.open('https://wa.me/918822184839', '_blank');
+      window.open('https://wa.me/916000206223', '_blank');
       setIsOpen(false);
       setName('');
       setNumber('');
@@ -82,13 +86,17 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#192347]/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
+          ${isMenuOpen || isScrolled ? 'bg-[#192347]/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}
+        `}
+      >
+        <div className="w-full px-3 sm:px-6 lg:px-8 max-w-[100vw]">
           <div className="flex items-center justify-between h-16 sm:h-20">
 
             {/* Logo */}
-            <div className="flex items-center">
-              <img src={Logo} className='h-10 w-22 pl-2' alt="Logo" />
+            <div className="flex items-center flex-shrink-0 min-w-0">
+              <img src={Logo} className='h-7 sm:h-10 w-auto object-contain' alt="Logo" />
             </div>
 
             {/* Desktop Navigation */}
@@ -111,33 +119,46 @@ function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={toggleMenu} className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Toggle menu">
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden fixed inset-0 bg-[#192347] transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="#home" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
-              Home
-            </a>
-
-            <a href="#about" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
-              About
-            </a>
-
-            <a href="#contact" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
-              Contact
-            </a>
-
-            <button onClick={openForm} className="bg-[#D4AF37] text-[#192347] px-8 py-3 rounded-lg text-xl font-semibold hover:bg-[#c49d2e] transition-all">
-              Get Started
+            <button onClick={toggleMenu} className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0 relative z-[60]" aria-label="Toggle menu">
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 z-[55] bg-[#192347] transition-all duration-300 ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Close button */}
+        <button 
+          onClick={toggleMenu} 
+          className="absolute top-5 right-5 text-white p-2 hover:bg-white/10 rounded-lg transition-colors z-10"
+          aria-label="Close menu"
+        >
+          <X size={24} />
+        </button>
+        
+        <div className="flex flex-col items-center justify-center min-h-screen space-y-8">
+          <a href="#home" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
+            Home
+          </a>
+
+          <a href="#about" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
+            About
+          </a>
+
+          <a href="#contact" onClick={handleLinkClick} className="text-white text-2xl font-semibold hover:text-[#D4AF37] transition-colors">
+            Contact
+          </a>
+
+          <button onClick={openForm} className="bg-[#D4AF37] text-[#192347] px-8 py-3 rounded-lg text-xl font-semibold hover:bg-[#c49d2e] transition-all">
+            Get Started
+          </button>
+        </div>
+      </div>
 
       {/* Form Modal */}
       {isOpen && (
@@ -241,11 +262,13 @@ function Navbar() {
                 {loading ? (
                   <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
                 ) : (
-                  "Submit"
+                  <>
+                    Submit
+                    <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
+                      <path strokeLinecap='round' strokeLinejoin='round' d='M9 5l7 7-7 7' />
+                    </svg>
+                  </>
                 )}
-                <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2.5}>
-                  <path strokeLinecap='round' strokeLinejoin='round' d='M9 5l7 7-7 7' />
-                </svg>
               </button>
             </div>
 

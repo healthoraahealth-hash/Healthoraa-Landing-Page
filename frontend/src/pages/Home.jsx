@@ -12,7 +12,7 @@ import WhatsappLogo from '../assets/images/whatsapp.png';
 
 function Home() {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/918822184839', '_blank');
+    window.open('https://wa.me/916000206223', '_blank');
   };
 
   return (
@@ -31,15 +31,26 @@ function Home() {
       </Element>
 
       {/* WhatsApp Floating Button */}
-      <button
-        onClick={handleWhatsAppClick}
-        className="fixed bottom-6 right-6 z-[999] w-14 h-18 md:w-16 md:h-16 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center group"
-        aria-label="Chat on WhatsApp"
-      >
+    <button
+  onClick={handleWhatsAppClick}
+  aria-label="Chat on WhatsApp"
+  className="
+    fixed
+    bottom-4
+    right-[max(1rem,env(safe-area-inset-right))]
+    z-50
+    w-12 h-12 md:w-16 md:h-16
+    rounded-full
+    flex items-center justify-center
+    shadow-lg
+    overflow-hidden
+  "
+>
+
         <img 
           src={WhatsappLogo} 
           alt="WhatsApp" 
-          className="w-9 h-9 md:w-12 md:h-12"
+          className="w-9 h-9 md:w-12 md:h-12 relative z-10"
         />
         {/* Pulse animation ring */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75"></span>

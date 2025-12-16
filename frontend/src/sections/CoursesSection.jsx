@@ -34,7 +34,7 @@ function CoursesSection() {
 
             console.log('Form submitted:', formData);
             await submitForm(formData);
-            window.open('https://wa.me/918822184839', '_blank');
+            window.open('https://wa.me/916000206223', '_blank');
             setIsOpen(false);
             
         } catch (error) {
@@ -65,7 +65,7 @@ function CoursesSection() {
             title: "PCOD/PCOS Management",
             description: "Holistic management through nutrition and lifestyle",
             category: "hormonal",
-            stats: "16 weeks • Expert-led",
+            stats: "3 month/1 year • Expert-led",
             icon: Activity,
             color: "bg-[#192347]"
         },
@@ -158,7 +158,7 @@ function CoursesSection() {
                 </div>
 
                 {/* Category Filter Pills */}
-                <div className='mb-12 sm:mb-14 md:mb-16 overflow-x-auto pb-3 -mx-6 px-6 sm:mx-0 sm:px-0'>
+                <div className='mb-12 sm:mb-14 md:mb-16 overflow-x-auto pb-3'>
                     <div className='flex gap-3 sm:gap-4 min-w-max sm:min-w-0 sm:flex-wrap'>
                         {categories.map((cat) => (
                             <button
@@ -270,6 +270,19 @@ function CoursesSection() {
                     <input
                         type='tel'
                         placeholder='Enter your mobile number'
+                        onChange={(e) => setNumber(e.target.value)}
+                        className='w-full px-4 py-3 sm:py-3.5 text-sm sm:text-base border-2 border-slate-200 rounded-xl focus:border-blue-900 focus:outline-none transition-colors'
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label className='block text-sm font-semibold text-slate-700 mb-2 tracking-wide'>
+                        Course
+                    </label>
+                    <input
+                        type='name'
+                        placeholder='Enter the course name'
                         onChange={(e) => setNumber(e.target.value)}
                         className='w-full px-4 py-3 sm:py-3.5 text-sm sm:text-base border-2 border-slate-200 rounded-xl focus:border-blue-900 focus:outline-none transition-colors'
                         required

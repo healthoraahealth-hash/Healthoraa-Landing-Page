@@ -11,20 +11,19 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
      user: process.env.EMAIL_USER,
-    // pass: 'duoaifvnkoolivoq'
     pass: process.env.EMAIL_PASS
   },
 });
 
 // Route for sending email
 router.post('/', async (req, res) => {
-  const { name, number, email, age, hometown } = req.body;
+  const { name, number, course, email, age, hometown } = req.body;
     
   const mailOptions = {
     from: email,
     to: 'healthoraa.health@gmail.com', // where you want to receive messages
     subject: `New message from ${name}`,
-    text: `User details of ${email}: \n\n${number}\n${name}\n${age}\n${hometown}`,
+    text: `User details of ${email}: \n\n${number}\n${name}\n{${course}\n${age}\n${hometown}`,
   };
 
   try {
