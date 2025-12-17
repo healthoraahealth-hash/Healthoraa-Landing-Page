@@ -29,7 +29,7 @@ function CoursesSection() {
                 age: age,
                 hometown: hometown
             };
-            
+
             // console.log('Form submitted:', formData);
             window.open('https://wa.me/916000206223', '_blank');
             setIsOpen(false);
@@ -46,7 +46,7 @@ function CoursesSection() {
             title: "Weight Loss Program",
             description: "Science-backed approach to sustainable weight management",
             category: "weight",
-            stats: "12 weeks • Personalized",
+            stats: "2 months/1 yr • Personalized",
             icon: Scale,
             color: "bg-[#192347]"
         },
@@ -54,7 +54,7 @@ function CoursesSection() {
             title: "Weight Gain Program",
             description: "Healthy muscle building and weight gain strategies",
             category: "weight",
-            stats: "12 weeks • Personalized",
+            stats: "2 months/6 months • Personalized",
             icon: Dumbbell,
             color: "bg-[#192347]"
         },
@@ -70,7 +70,7 @@ function CoursesSection() {
             title: "Thyroid Control",
             description: "Balance your metabolism naturally",
             category: "hormonal",
-            stats: "12 weeks • Medically-guided",
+            stats: "2 months • Medically-guided",
             icon: Heart,
             color: "bg-[#192347]"
         },
@@ -78,7 +78,7 @@ function CoursesSection() {
             title: "Diabetes Control",
             description: "Manage blood sugar through smart nutrition",
             category: "chronic",
-            stats: "24 weeks • Clinical support",
+            stats: "2 months • Clinical support",
             icon: Droplet,
             color: "bg-[#192347]"
         },
@@ -86,7 +86,7 @@ function CoursesSection() {
             title: "Cholesterol Management",
             description: "Heart-healthy lifestyle modifications",
             category: "chronic",
-            stats: "16 weeks • Heart-focused",
+            stats: "2 months • Heart-focused",
             icon: BarChart3,
             color: "bg-[#192347]"
         },
@@ -94,7 +94,7 @@ function CoursesSection() {
             title: "Derma Nutrition",
             description: "Radiant skin through nutritional wellness",
             category: "beauty",
-            stats: "8 weeks • Visible results",
+            stats: "2 months • Visible results",
             icon: Sparkles,
             color: "bg-[#192347]"
         },
@@ -102,7 +102,7 @@ function CoursesSection() {
             title: "Hair Care Program",
             description: "Strengthen hair health from within naturally",
             category: "beauty",
-            stats: "12 weeks • Natural approach",
+            stats: "2 months • Natural approach",
             icon: Scissors,
             color: "bg-[#192347]"
         },
@@ -110,7 +110,7 @@ function CoursesSection() {
             title: "Complete Lifestyle Reset",
             description: "Full wellness transformation program",
             category: "lifestyle",
-            stats: "24 weeks • Comprehensive",
+            stats: "2 months • Comprehensive",
             icon: Compass,
             color: "bg-[#192347]"
         },
@@ -118,7 +118,7 @@ function CoursesSection() {
             title: "Customised Health Plan Program",
             description: "Tailored to your unique health goals and lifestyle needs",
             category: "lifestyle",
-            stats: "Flexible • One-on-one",
+            stats: "2 months • One-on-one",
             icon: UserCog,
             color: "bg-[#192347]"
         }
