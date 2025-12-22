@@ -55,7 +55,7 @@ const Results = () => {
                     <img
                       src={slide.src}
                       alt={`Result ${slide.id}`}
-                      className="w-full h-full object-cover object-[40%_20%]"
+                      className="w-full h-full object-cover object-[50%_50%]"
                       draggable="false"
                     />
                   )}
