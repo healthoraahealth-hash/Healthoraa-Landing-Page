@@ -5,10 +5,15 @@ import About from '../sections/About'
 import CoursesSection from '../sections/CoursesSection'
 import TestimonialSection from '../sections/TestimonialSection'
 import ContactForm from '../sections/ContactForm'
+import Footer from '../sections/Footer'
 import { Element } from 'react-scroll'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import WhatsappLogo from '../assets/images/whatsapp.png';
+import ChristmasBanner from '../assets/videos/Christmas_offer.mp4';
+import ChristmasBanner2 from '../assets/videos/Christmas_offer2.mp4';
+import ChristmasBanner3 from '../assets/videos/Christmas_offer.mp4';
+import ChristmasOffer from '../assets/images/ChristmasOffer.jpeg';
 
 function Home() {
   const handleWhatsAppClick = () => {
@@ -18,6 +23,18 @@ function Home() {
   return (
     <>
       <Navbar />
+   
+      <div className="w-full mt-16 sm:mt-20 bg-[#192347] overflow-hidden">
+        <video
+          src={ChristmasBanner2}
+          className="w-full h-auto object-contain block"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      </div>
+
       <Element name='home'>
         <HeroSection />
       </Element>
@@ -29,24 +46,24 @@ function Home() {
       <Element name='contact'>
         <ContactForm />
       </Element>
+      <Footer/>
 
       {/* WhatsApp Floating Button */}
-    <button
-  onClick={handleWhatsAppClick}
-  aria-label="Chat on WhatsApp"
-  className="
-    fixed
-    bottom-4
-    right-[max(1rem,env(safe-area-inset-right))]
-    z-50
-    w-12 h-12 md:w-16 md:h-16
-    rounded-full
-    flex items-center justify-center
-    shadow-lg
-    overflow-hidden
-  "
->
-
+      <button
+        onClick={handleWhatsAppClick}
+        aria-label="Chat on WhatsApp"
+        className="
+          fixed
+          bottom-4
+          right-[max(1rem,env(safe-area-inset-right))]
+          z-50
+          w-12 h-12 md:w-16 md:h-16
+          rounded-full
+          flex items-center justify-center
+          shadow-lg
+          overflow-hidden
+        "
+      >
         <img 
           src={WhatsappLogo} 
           alt="WhatsApp" 

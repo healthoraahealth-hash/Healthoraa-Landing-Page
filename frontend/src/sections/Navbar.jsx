@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Logo from '../assets/images/Logo.png'; // Fixed import - removed curly braces
 import { submitForm } from '../api';
+import ChristmasOffer from '../assets/images/ChristmasOffer.jpeg';
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -101,6 +103,7 @@ function Navbar() {
                 alt="Logo"
               />
             </div>
+
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">

@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
+
+// Import statements (these would be your actual imports)
 import Result1 from '../assets/images/Result1.jpeg'
 import Result2 from '../assets/images/Result2.jpeg'
 import Result3 from '../assets/images/Result3.jpeg'
 import Result4 from '../assets/images/Result4.jpeg'
+import ChristmasBanner from '../assets/videos/Christmas_offer.mp4'
 
 const Results = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { id: 1, image: Result1 },
-    { id: 2, image: Result2 },
-    { id: 3, image: Result3 },
-    { id: 4, image: Result4 }
+    { id: 1, type: 'image', src: Result1 },
+    { id: 2, type: 'image', src: Result2 },
+    { id: 3, type: 'image', src: Result3 },
+    { id: 4, type: 'image', src: Result4 }
   ];
 
   useEffect(() => {
@@ -19,7 +22,7 @@ const Results = () => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="flex items-center justify-center p-4">
@@ -38,13 +41,24 @@ const Results = () => {
                 key={slide.id}
                 className="min-w-full"
               >
-                <div className="relative w-full h-[400px]">
-                  <img
-                    src={slide.image}
-                    alt={`Result ${slide.id}`}
-                    className="w-full h-full object-contain"
-                    draggable="false"
-                  />
+                <div className="relative w-full h-[400px] overflow-hidden bg-slate-100">
+                  {slide.type === "video" ? (
+                    <video
+                      src={slide.src}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={slide.src}
+                      alt={`Result ${slide.id}`}
+                      className="w-full h-full object-cover object-[40%_20%]"
+                      draggable="false"
+                    />
+                  )}
                 </div>
               </div>
             ))}
