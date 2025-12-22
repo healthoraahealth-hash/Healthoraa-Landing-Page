@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex gap-4 mt-4">
             <a
-              href="https://instagram.com/yourprofile"
+              href="https://www.instagram.com/healthoraa_?igsh=MTB6NWpiZHJha2t5Yw=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/company/healthoraahub"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
