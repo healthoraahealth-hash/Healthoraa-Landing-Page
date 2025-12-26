@@ -10,10 +10,10 @@ import { Element } from 'react-scroll'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import WhatsappLogo from '../assets/images/whatsapp.png';
-import ChristmasBanner from '../assets/videos/Christmas_offer.mp4';
-import ChristmasBanner2 from '../assets/videos/Christmas_offer2.mp4';
-import ChristmasBanner3 from '../assets/videos/Christmas_offer.mp4';
-import ChristmasOffer from '../assets/images/ChristmasOffer.jpeg';
+// import ChristmasBanner from '../assets/videos/Christmas_offer.mp4';
+// import ChristmasBanner2 from '../assets/videos/Christmas_offer2.mp4';
+// import ChristmasBanner3 from '../assets/videos/Christmas_offer.mp4';
+// import ChristmasOffer from '../assets/images/ChristmasOffer.jpeg';
 
 function Home() {
   const handleWhatsAppClick = () => {
@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
       <Navbar />
-   
+{/*    
       <div className="w-full mt-16 sm:mt-20 bg-[#192347] overflow-hidden">
         <video
           src={ChristmasBanner2}
@@ -33,7 +33,7 @@ function Home() {
           loop
           playsInline
         />
-      </div>
+      </div> */}
 
       <Element name='home'>
         <HeroSection />
